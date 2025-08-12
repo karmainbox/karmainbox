@@ -223,11 +223,11 @@
                  showCheckoutError(error.message || 'Checkout failed');
                },
                onClose: function() {
-                 console.log('🔄 Checkout closed');
-                 // If checkout was closed without completion, show error
-                 if (document.getElementById('checkoutSuccess').style.display === 'none') {
-                   showCheckoutError('Checkout was cancelled');
-                 }
+                     console.log('🔄 Checkout modal closed - redirecting to main site');
+                     // Always redirect to main site when modal is closed
+                     setTimeout(() => {
+                       window.location.href = 'https://karmainbox.github.io/';
+                     }, 500); // Small delay to ensure any success processing completes
                }
              });
            } catch (error) {

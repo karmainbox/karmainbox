@@ -1,137 +1,116 @@
- <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Privacy Policy - Karma Inbox</title>
-   <link rel="icon" type="image/png" sizes="128x128" href="icon128.png">
-      <style>
-          body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height:
-  1.6; }
-          h1 { color: #333; border-bottom: 2px solid #4285f4; padding-bottom: 10px; }
-          h2 { color: #555; margin-top: 30px; }
-          .highlight { background-color: #e8f0fe; padding: 15px; border-radius: 5px; margin: 15px 0; }
-          .last-updated { color: #666; font-style: italic; }
-      </style>
-  </head>
-  <body>
-      <h1>Privacy Policy for Karma Inbox</h1>
-      <p class="last-updated">Last updated: August 3, 2025</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Karma Inbox</title>
+  <link rel="icon" type="image/png" sizes="128x128" href="icon128.png">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+    h1 { color: #333; border-bottom: 2px solid #4285f4; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 30px; }
+    .highlight { background-color: #e8f0fe; padding: 15px; border-radius: 5px; margin: 15px 0; }
+    .last-updated { color: #666; font-style: italic; }
+    code { background: #f2f2f2; padding: 2px 4px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy for Karma Inbox</h1>
+  <p class="last-updated">Last updated: August 20, 2025</p>
 
-      <div class="highlight">
-          <strong>Privacy First:</strong> Karma Inbox is designed with privacy as a core principle. Your emails
-  never leave your device, and we don't collect any personal information.
-      </div>
+  <div class="highlight">
+    <strong>Privacy First:</strong> Karma Inbox is designed with privacy as a core principle. We only request the minimum data required for functionality, and all processing is aligned with Google’s <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">User Data Policy (Limited Use)</a>.
+  </div>
 
-      <h2>1. Information We Don't Collect</h2>
-      <p>Karma Inbox does NOT collect, store, transmit, or have access to:</p>
+  <h2>1. Information We Access</h2>
+  <p>Karma Inbox requests access to certain Google user data through OAuth scopes and Chrome extension permissions:</p>
+
+  <h3>Google OAuth Scopes</h3>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/gmail.readonly</code> – Read your emails and settings so we can analyze message metadata and content for prioritization.</li>
+    <li><code>https://www.googleapis.com/auth/gmail.modify</code> – Move or label emails within Gmail when applying karma scores or user-selected actions.</li>
+    <li><code>https://www.googleapis.com/auth/gmail.labels</code> – View and manage your Gmail labels to categorize priority emails.</li>
+    <li><code>openid</code>, <code>email</code>, <code>profile</code> – To identify your Google account, display your name/profile picture, and ensure you are signed into the correct mailbox.</li>
+  </ul>
+
+  <h3>Chrome Extension Permissions</h3>
+  <ul>
+    <li><strong>storage</strong> – Save preferences and cached metadata locally.</li>
+    <li><strong>identity</strong> – Secure OAuth login with Google.</li>
+    <li><strong>activeTab</strong> / <strong>tabs</strong> – Display karma indicators inside the Gmail interface.</li>
+    <li><strong>notifications</strong> – Notify you about important emails or digests if enabled.</li>
+    <li><strong>alarms</strong> – Schedule background checks for new messages.</li>
+  </ul>
+
+  <h2>2. How We Use This Data</h2>
+  <ul>
+    <li><strong>Email metadata and content</strong> (sender, subject, body, labels) – Used locally to calculate karma scores, summarize, and prioritize your inbox.</li>
+    <li><strong>Labels</strong> – Created or updated to organize messages into high/low-priority folders when you enable this feature.</li>
+    <li><strong>Profile information</strong> – Display your account identity inside the extension; not stored or shared.</li>
+    <li><strong>Notifications/alarms</strong> – Provide reminders or digests at user-defined times.</li>
+  </ul>
+
+  <h2>3. Local vs External Processing</h2>
+  <ul>
+    <li><strong>On-device:</strong> All core scoring and prioritization logic runs locally inside your browser.</li>
+    <li><strong>External AI (optional):</strong> If you enable AI summarization, selected message text is sent securely to your chosen provider (Anthropic, Google Gemini, or OpenAI). You must provide your own API key, and communications are direct between your browser and the provider. Karma Inbox does not intercept or store this data.</li>
+    <li><strong>Payments:</strong> Paddle APIs are used only for subscription billing; no email data is shared.</li>
+  </ul>
+
+  <h2>4. Data Retention</h2>
+  <p>We do not store your emails or personal data on our servers. Cached metadata and preferences remain only in your browser storage and are deleted if you uninstall the extension. OAuth tokens are securely handled by Chrome’s identity API.</p>
+
+  <h2>5. Sharing of Data</h2>
+  <ul>
+    <li>No selling or advertising use of your data.</li>
+    <li>No sharing with third parties, except:
       <ul>
-          <li>Your email content or messages</li>
-          <li>Your personal information or identity</li>
-          <li>Your browsing history or usage patterns</li>
-          <li>Any data about your contacts or email recipients</li>
-          <li>Analytics or tracking information</li>
+        <li><strong>AI providers</strong> you explicitly configure, for summaries.</li>
+        <li><strong>Payment processor Paddle</strong>, for handling subscriptions (billing data only).</li>
       </ul>
+    </li>
+    <li>Disclosure only if legally required.</li>
+  </ul>
 
-      <h2>2. How Karma Inbox Works</h2>
-      <p><strong>Local Processing Only:</strong></p>
-      <ul>
-          <li>All email analysis happens entirely on your device</li>
-          <li>Karma scores are calculated locally in your browser</li>
-          <li>Behavioral analysis uses only local data processing</li>
-          <li>No email data is sent to our servers or any external services</li>
-      </ul>
+  <h2>6. Limited Use Compliance</h2>
+  <p>Karma Inbox complies with Google’s <em>Limited Use</em> policy:</p>
+  <ul>
+    <li>Gmail data is only used to provide user-facing features (karma scoring, prioritization, summarization).</li>
+    <li>Data is never sold or used for ads.</li>
+    <li>Human access to data is prohibited except with your consent, for security, or legal compliance.</li>
+    <li>Data is not transferred to others except as necessary to provide the features you enable.</li>
+  </ul>
 
-      <h2>3. Data Storage</h2>
-      <p><strong>Local Storage:</strong></p>
-      <ul>
-          <li>User preferences (AI provider choice, karma thresholds) stored locally in your browser</li>
-          <li>Cached email metadata (sender, subject, timestamps) stored locally for performance</li>
-          <li>All data remains on your device and is deleted when you uninstall the extension</li>
-      </ul>
+  <h2>7. Your Choices</h2>
+  <ul>
+    <li>Revoke permissions anytime via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account settings</a>.</li>
+    <li>Delete all local data by uninstalling the extension.</li>
+    <li>Disable or choose which AI provider you connect.</li>
+  </ul>
 
-      <p><strong>Secure Storage:</strong></p>
-      <ul>
-          <li>API keys are encrypted using AES-GCM encryption before local storage</li>
-          <li>No API keys or sensitive data are transmitted to our servers</li>
-      </ul>
+  <h2>8. Security</h2>
+  <ul>
+    <li>All data in transit uses TLS encryption.</li>
+    <li>Local API keys are encrypted before storage.</li>
+    <li>No centralized data collection by Karma Inbox.</li>
+  </ul>
 
-      <h2>4. Third-Party Services (Optional)</h2>
-      <p><strong>Gmail API:</strong></p>
-      <ul>
-          <li>Used only to read email metadata (sender, subject, timestamps) for karma calculations</li>
-          <li>Required for core functionality</li>
-          <li>Follows Google's privacy policies</li>
-      </ul>
+  <h2>9. Children’s Privacy</h2>
+  <p>Karma Inbox is not directed at children under 13 and does not knowingly collect their data.</p>
 
-      <p><strong>AI Providers (Optional):</strong></p>
-      <ul>
-          <li>Only used if you choose to enable AI features</li>
-          <li>Requires your own API keys from chosen providers (OpenAI, Google Gemini, Anthropic Claude, or local
-   Ollama)</li>
-          <li>Email summaries are generated using your direct API connection</li>
-          <li>We don't have access to or store any API communications</li>
-          <li>Each provider has their own privacy policy for API usage</li>
-      </ul>
+  <h2>10. Changes</h2>
+  <p>We may update this policy, and will update the date above. Material changes will be posted at this URL.</p>
 
-      <h2>5. Permissions Explained</h2>
-      <p><strong>Required Permissions:</strong></p>
-      <ul>
-          <li><strong>Gmail access:</strong> To read email metadata and inject karma indicators</li>
-          <li><strong>Storage:</strong> To cache data locally and store preferences</li>
-          <li><strong>Identity:</strong> For secure Gmail OAuth authentication</li>
-          <li><strong>Active Tab:</strong> To display karma indicators in Gmail interface</li>
-      </ul>
+  <h2>11. Contact</h2>
+  <p>Email us at <a href="mailto:karmamailinbox@gmail.com">karmamailinbox@gmail.com</a> for questions or requests.</p>
 
-      <p><strong>Optional Permissions (requested when needed):</strong></p>
-      <ul>
-          <li><strong>AI Provider domains:</strong> Only if you choose to use AI features</li>
-          <li><strong>Localhost:</strong> Only if you choose to use local Ollama AI</li>
-      </ul>
+  <div class="highlight">
+    <strong>Summary:</strong> Karma Inbox only uses Gmail and Google profile data to prioritize and summarize your emails. We do not store, sell, or share your email content. Processing is local unless you explicitly enable external AI.
+  </div>
 
-      <h2>6. Data Security</h2>
-      <ul>
-          <li>All sensitive data is encrypted before local storage</li>
-          <li>No data transmission to external servers beyond necessary API calls</li>
-          <li>OAuth tokens are securely managed through Chrome's identity system</li>
-          <li>Extension follows Chrome Web Store security policies</li>
-      </ul>
-
-      <h2>7. Your Rights and Control</h2>
-      <ul>
-          <li>You can revoke permissions at any time through Chrome settings</li>
-          <li>You can delete all local data by uninstalling the extension</li>
-          <li>You control which AI providers (if any) to use</li>
-          <li>No account creation or registration required</li>
-      </ul>
-
-      <h2>8. Children's Privacy</h2>
-      <p>Karma Inbox does not collect any personal information from anyone, including children under 13. The
-  extension is designed to work with existing Gmail accounts and does not require or collect age information.</p>
-
-      <h2>9. Changes to This Policy</h2>
-      <p>We may update this privacy policy to reflect changes in our practices or for legal compliance. Any
-  changes will be posted at this URL with an updated "Last modified" date.</p>
-
-      <h2>10. Open Source</h2>
-      <p>Karma Inbox may be open-sourced in the future, allowing full transparency of data handling practices
-  through code review.</p>
-
-      <h2>11. Contact Information</h2>
-      <p>If you have questions about this privacy policy or Karma Inbox's privacy practices:</p>
-      <ul>
-          <li>Email: karmamailinbox@gmail.com</li>
-          
-      </ul>
-
-      <div class="highlight">
-          <strong>Summary:</strong> Karma Inbox prioritizes your privacy by processing all data locally on your
-  device. We don't collect, store, or have access to your personal information or email content.
-      </div>
-
-      <hr>
-      <p style="text-align: center; color: #666; font-size: 14px;">
-          Karma Inbox Chrome Extension | Privacy Policy | Last Updated: August 3, 2025
-      </p>
-  </body>
-  </html>
+  <hr>
+  <p style="text-align: center; color: #666; font-size: 14px;">
+    Karma Inbox Chrome Extension | Privacy Policy | Last Updated: August 20, 2025
+  </p>
+</body>
+</html>
